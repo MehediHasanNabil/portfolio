@@ -1,0 +1,49 @@
+.box {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: blueviolet;
+  box-shadow: 0px 0px 20px 6px var(--header-image-border);
+}
+
+.box::after {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 100%;
+  top: 0;
+  left: 30%;
+  transition: 0.5s;
+  background: linear-gradient(350deg, black, #fff);
+  animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* .box::before {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  background-color: rgb(0, 0, 0);
+  z-index: 1;
+  border-radius: 50%;
+} */
+
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  border-color: var(--blue-color);
+  padding: 5px;
+  z-index: 2;
+}
