@@ -1,8 +1,11 @@
-.cardHover {
+.project_card {
   transition: all 0.5s;
+  border-radius: 10px;
+  background: #1e1e1e;
+  box-shadow: -20px 20px 60px #1a1a1a, 20px -20px 60px #232323;
 }
 
-.cardHover:hover {
+.project_card:hover {
   transition: all 0.5s;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px);
 }

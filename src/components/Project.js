@@ -40,14 +40,14 @@ export default function Project({ project, limit }) {
   ];
 
   return (
-    <section className="container my-5">
-      <h5 className="text-center my-2">My Project</h5>
-      <h2 className="text-center">How I can help your next project</h2>
+    <section className="container py-5 bg-color">
+      <h5 className="text-center my-2 fw-bold">My Project</h5>
+      <h2 className="text-center fw-bold mb-3">How I can help your next project</h2>
 
       <Row>
         {projectArray.map((project) => (
-          <Col md={4} key={uuid()}>
-            <Card className={`mx-auto my-3 p-2 border-0 ${styles.cardHover}`}>
+          <Col md={4} key={uuid()} data-aos="fade-up">
+            <Card className={`mx-auto my-3 p-2 border-0 ${styles.project_card}`}>
               <Card.Img
                 variant="top"
                 className="h-50"

@@ -30,13 +30,14 @@ export default function Resume() {
       university: "Dhangora model High School, Sirajganj",
     },
   ];
-  return (
-    <div className="bg-light">
-      <Container>
-        <Row className="py-5">
+  return ( 
+    <section className="container py-5 bg-color">
+      <h5 className="text-center my-2 fw-bold">Resume</h5>
+      <h2 className="text-center fw-bold mb-3">A summary of My Resume</h2>
+        <Row data-aos="fade-up">
           <Col md={6}>
             <h2>My Education</h2>
-            <div className={styles.resume_border}>
+            <div data-i="" className={styles.resume_border}>
               {education.map((item) => (
                 <Card key={item.id} className={`border-0 ${styles.arrow_icon}`}>
                   <Card.Body>
@@ -48,11 +49,8 @@ export default function Resume() {
               ))}
             </div>
           </Col>
-          <Col md={6}>
-            <h2>My Experience</h2>
-          </Col>
         </Row>
-      </Container>
-    </div>
+      
+    </section>
   );
 }

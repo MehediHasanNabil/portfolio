@@ -4,9 +4,9 @@ import FAQ_bg from "../assets/undraw_questions_re_1fy7.svg";
 export default function FAQ() {
   return (
     <>
-      <section className="container">
-        <Row>
-          <h2 className="text-center my-2">FAQ</h2>
+      <section className="container py-5 bg-color">
+        <Row data-aos="fade-up">
+          <h2 className="text-center fw-bold my-2">FAQ</h2>
           <Col md={6}>
             <Image className="img-fluid" style={{ height: "270px"}} src={FAQ_bg} />
           </Col>

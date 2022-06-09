@@ -1,9 +1,9 @@
-import { Button, Image, Container, Row } from "react-bootstrap";
+import { Button, Container, Row } from "react-bootstrap";
 import styles from "../styles/Header.module.css";
 import { Typewriter } from "react-simple-typewriter";
-import portfolio from "../assets/nabil.jpg";
 import { useEffect } from "react";
 import AvatarImage from "./AvatarImage";
+import SocialMedia from "./SocialMedia";
 
 export default function Header() {
   useEffect(function () {
@@ -17,6 +17,7 @@ export default function Header() {
   }, []);
   return (
     <section id="home" className={`text-light ${styles.backgroundImage}`}>
+      {/* <MyParticles />  */}
       <Container>
         <Row className="position-relative" style={{ minHeight: "100vh" }}>
           <div
@@ -25,12 +26,11 @@ export default function Header() {
           >
             <AvatarImage />
             <br />
-
-            <h2 className="my-2" style={{ fontSize: "2.2rem" }}>
+            <h2 className="my-2 fw-bold" style={{ fontSize: "2.2rem" }}>
               I am{"  "}
               <Typewriter
-                words={["Web Developer.", "UI/UX Designer."]}
-                loop={5}
+                words={["a Web Developer.", "an UI/UX Designer."]}
+                loop={3}
                 cursor
                 cursorStyle="_"
                 typeSpeed={80}
@@ -38,7 +38,8 @@ export default function Header() {
                 delaySpeed={1500}
               />
             </h2>
-            <h5>I am Md. Mehedi Hasan Nabil</h5>
+            <h5 className="fw-bold">I am Md. Mehedi Hasan Nabil</h5>
+            <SocialMedia />
             <Button variant="primary px-4 my-1 me-4">Hire Me</Button>
             <a
               href="../assets/header-bg.jpg"

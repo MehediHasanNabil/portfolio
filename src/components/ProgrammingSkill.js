@@ -1,5 +1,5 @@
 import { Col, ProgressBar } from "react-bootstrap";
-import uuid from 'react-uuid';
+import uuid from "react-uuid";
 
 export default function ProgrammingSkill() {
   const skills = [
@@ -32,15 +32,18 @@ export default function ProgrammingSkill() {
       id: "6",
       name: "Node JS",
       level: "70",
-    },{
+    },
+    {
       id: "7",
       name: "Java",
       level: "65",
-    },{
+    },
+    {
       id: "8",
       name: "TypeScript",
       level: "70",
-    },{
+    },
+    {
       id: "9",
       name: "Git",
       level: "70",
@@ -48,23 +51,23 @@ export default function ProgrammingSkill() {
   ];
 
   return (
-    <section id="skills" className="bg-light">
-     <div className="container">
-     <div className="row py-5">
-        <h2 className="text-center my-2">My Skills</h2>
-        {skills.map((skill) => (
-          <Col key={uuid()} md={4}>
-            <p className="fs-5">{skill.name}</p>
-            <ProgressBar
-              animated
-              variant="primary"
-              now={skill.level}
-              label={`${skill.level}%`}
-            />
-          </Col>
-        ))}
+    <section id="skills" className="bg-color">
+      <div className="container">
+        <div className="row py-5">
+          <h2 className="text-center my-2">My Skills</h2>
+          {skills.map((skill) => (
+            <Col key={uuid()} md={4} data-aos="fade-up">
+              <p className="fs-5">{skill.name}</p>
+              <ProgressBar
+                animated
+                variant="primary"
+                now={skill.level}
+                label={`${skill.level}%`}
+              />
+            </Col>
+          ))}
+        </div>
       </div>
-     </div>
     </section>
   );
 }

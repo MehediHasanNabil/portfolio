@@ -2,10 +2,11 @@ import { Form, Button, Row, Col } from "react-bootstrap";
 
 export default function Contact() {
   return (
-    <section className="container" id="contact">
-      <Row>
-        <h1>Let's get in touch</h1>
-        <Col lg={7} className="p-3 order-md-1">
+    <section className="container py-5 bg-color" id="contact">
+      <Row data-aos="fade-up">
+        <h5 className="text-center my-2 fw-bold">Contact</h5>
+        <h2 className="text-center fw-bold mb-3">Let's get in touch</h2>
+        <Col lg={7} className="p-4 order-md-1">
           <Form>
             <div className="d-flex gap-3">
               <Form.Group className="mb-3 w-100">
