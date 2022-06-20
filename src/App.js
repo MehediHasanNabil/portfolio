@@ -3,15 +3,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "aos/dist/aos.css";
 import AOS from "aos";
-import ProgrammingSkill from "./components/ProgrammingSkill";
-import Project from "./components/Project";
-import HireMe from "./components/HireMe";
-import About from "./components/About";
-import Contact from "./components/Contact";
-import FAQ from "./components/FAQ";
-import Resume from "./components/Resume";
 import { useEffect } from "react";
-import Hr from "./components/Hr";
+import {Route, Routes } from "react-router-dom";
+import Home from "./components/Home";
+import NotFound from "./components/NotFound";
 
 function App() {
   useEffect(function () {
@@ -20,20 +15,15 @@ function App() {
       once: true,
     });
   }, []);
-  
+
   return (
-    <div className="bg-color">
-      <Project />
-      <HireMe />
-      <About />
-      <Hr />
-      {/* <FAQ />
-      <Hr /> */}
-      <Resume />
-      <ProgrammingSkill />
-      <Hr />
-      <Contact />
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<Home />} />
+
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </>
   );
 }
 

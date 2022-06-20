@@ -20,9 +20,7 @@ export default function About() {
     },
   ];
   return (
-    <section
-      id="about"
-      className="container py-5 bg-color">
+    <section id="about" className="container py-5 bg-color">
       <h5 className="text-center fw-bold my-2">About</h5>
       <h2 className="text-center fw-bold mb-3">Know Me</h2>
       <Row className="mt-5" data-aos="fade-up">

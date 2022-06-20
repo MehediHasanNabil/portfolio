@@ -56,7 +56,7 @@ export default function ProgrammingSkill() {
         <div className="row py-5">
           <h2 className="text-center my-2">My Skills</h2>
           {skills.map((skill) => (
-            <Col key={uuid()} md={4} data-aos="fade-up">
+            <Col key={uuid()} className="my-2" md={4} data-aos="fade-up">
               <p className="fs-5">{skill.name}</p>
               <ProgressBar
                 animated

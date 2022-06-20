@@ -1,40 +1,43 @@
 import { Button, Card, Col, Row } from "react-bootstrap";
+import {Link} from "react-router-dom"
 import uuid from "react-uuid";
 import styles from "../styles/Project.module.css";
 import moviePic from "../assets/undraw_horror_movie_3988.svg";
 import chatPic from "../assets/undraw_chatting_re_j55r.svg";
-import ECommercePic from "../assets/undraw_web_shopping_re_owap.svg";
+import eCommercePic from "../assets/undraw_web_shopping_re_owap.svg";
+import resume from "../assets/undraw_resume_folder_re_e0bi.svg";
+import codeEditor from "../assets/undraw_code_review_re_woeb.svg";
 
 export default function Project({ project, limit }) {
   let projectArray = [
     {
-      id: 1,
+      id: uuid(),
       name: "Online Movies Ticket Booking",
       backgroundPic: moviePic,
       liveUrl: "https://movie-ticket-booking-nodejs.herokuapp.com/",
     },
     {
-      id: 2,
+      id: uuid(),
       name: "React Chat Application",
       backgroundPic: chatPic,
       liveUrl: "https://movie-ticket-booking-nodejs.herokuapp.com/",
     },
     {
-      id: 3,
+      id: uuid(),
       name: "E-Commerce App",
-      backgroundPic: ECommercePic,
+      backgroundPic: eCommercePic,
       liveUrl: "https://movie-ticket-booking-nodejs.herokuapp.com/",
     },
     {
-      id: 4,
+      id: uuid(),
       name: "Resume Builder Web Application",
-      backgroundPic: ECommercePic,
+      backgroundPic: resume,
       liveUrl: "https://movie-ticket-booking-nodejs.herokuapp.com/",
     },
     {
-      id: 5,
+      id: uuid(),
       name: "Online Code Editor (React)",
-      backgroundPic: ECommercePic,
+      backgroundPic: codeEditor,
       liveUrl: "https://movie-ticket-booking-nodejs.herokuapp.com/",
     },
   ];
@@ -42,12 +45,16 @@ export default function Project({ project, limit }) {
   return (
     <section className="container py-5 bg-color">
       <h5 className="text-center my-2 fw-bold">My Project</h5>
-      <h2 className="text-center fw-bold mb-3">How I can help your next project</h2>
+      <h2 className="text-center fw-bold mb-3">
+        How I can help your next project
+      </h2>
 
       <Row>
         {projectArray.map((project) => (
-          <Col md={4} key={uuid()} data-aos="fade-up">
-            <Card className={`mx-auto my-3 p-2 border-0 ${styles.project_card}`}>
+          <Col md={4} key={project.id} data-aos="fade-up">
+            <Link to="/detail"><Card
+              className={`mx-auto my-3 p-2 border-0 ${styles.project_card}`}
+            >
               <Card.Img
                 variant="top"
                 className="h-50"
@@ -79,7 +86,7 @@ export default function Project({ project, limit }) {
                   Live demo <i className="ms-2 bi bi-arrow-return-right"></i>
                 </a>
               </Card.Body>
-            </Card>
+            </Card></Link>
           </Col>
         ))}
       </Row>

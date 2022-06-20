@@ -12,7 +12,7 @@ export default function MyParticles() {
   const particlesLoaded = (container) => {
     console.log(container);
   };
-  
+
   return (
     <Particles
       id="tsparticles"

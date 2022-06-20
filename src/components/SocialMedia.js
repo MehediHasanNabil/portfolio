@@ -19,7 +19,7 @@ export default function SocialMedia() {
         <i className="bi bi-linkedin"></i>
       </a>
       <a target="_blank" href="https://github.com/MehediHasanNabil">
-        <i class="bi bi-github"></i>
+        <i className="bi bi-github"></i>
       </a>
     </div>
   );

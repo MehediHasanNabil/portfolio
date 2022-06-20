@@ -30,27 +30,26 @@ export default function Resume() {
       university: "Dhangora model High School, Sirajganj",
     },
   ];
-  return ( 
+  return (
     <section className="container py-5 bg-color">
       <h5 className="text-center my-2 fw-bold">Resume</h5>
       <h2 className="text-center fw-bold mb-3">A summary of My Resume</h2>
-        <Row data-aos="fade-up">
-          <Col md={6}>
-            <h2>My Education</h2>
-            <div data-i="" className={styles.resume_border}>
-              {education.map((item) => (
-                <Card key={item.id} className={`border-0 ${styles.arrow_icon}`}>
-                  <Card.Body>
-                    <Card.Title>{item.program}</Card.Title>
-                    <Card.Text>{item.university}</Card.Text>
-                    <Card.Text>{item.year}</Card.Text>
-                  </Card.Body>
-                </Card>
-              ))}
-            </div>
-          </Col>
-        </Row>
-      
+      <Row data-aos="fade-up">
+        <Col md={6}>
+          <h2>My Education</h2>
+          <div data-i="" className={styles.resume_border}>
+            {education.map((item) => (
+              <Card key={item.id} className={`border-0 ${styles.arrow_icon}`}>
+                <Card.Body>
+                  <Card.Title>{item.program}</Card.Title>
+                  <Card.Text>{item.university}</Card.Text>
+                  <Card.Text>{item.year}</Card.Text>
+                </Card.Body>
+              </Card>
+            ))}
+          </div>
+        </Col>
+      </Row>
     </section>
   );
 }

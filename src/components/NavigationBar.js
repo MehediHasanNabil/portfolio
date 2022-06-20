@@ -1,7 +1,8 @@
 import { Container, Nav, Navbar } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 import styles from "../styles/Navigation.module.css";
 
-export default function Navigation() {
+export default function NavigationBar() {
   return (
     <>
       <Navbar expand="lg" sticky="top" className={`shadow ${styles.navbar}`}>
@@ -10,19 +11,29 @@ export default function Navigation() {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mx-auto">
               <Nav.Item>
-                <Nav.Link className="fs-5 mx-2 text-light" href="#home">Home</Nav.Link>
+                <NavLink className="nav-link fs-5 mx-2 text-light" to="/" end>
+                  Home
+                </NavLink>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link className="fs-5 mx-2 text-light" href="#about">About</Nav.Link>
+                <Nav.Link className="fs-5 mx-2 text-light" href="#about">
+                  About
+                </Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link className="fs-5 mx-2 text-light" href="#skills">Skills</Nav.Link>
+                <Nav.Link className="fs-5 mx-2 text-light" href="#skills">
+                  Skills
+                </Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link className="fs-5 mx-2 text-light" href="#contact">Contact</Nav.Link>
+                <Nav.Link className="fs-5 mx-2 text-light" href="#contact">
+                  Contact
+                </Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link className="fs-5 mx-2 text-light" href="#contact">Blog</Nav.Link>
+                <Nav.Link className="fs-5 mx-2 text-light" href="#contact">
+                  Blog
+                </Nav.Link>
               </Nav.Item>
             </Nav>
           </Navbar.Collapse>

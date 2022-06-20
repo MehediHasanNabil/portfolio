@@ -8,7 +8,11 @@ export default function FAQ() {
         <Row data-aos="fade-up">
           <h2 className="text-center fw-bold my-2">FAQ</h2>
           <Col md={6}>
-            <Image className="img-fluid" style={{ height: "270px"}} src={FAQ_bg} />
+            <Image
+              className="img-fluid"
+              style={{ height: "270px" }}
+              src={FAQ_bg}
+            />
           </Col>
           <Col md={6}>
             <Accordion defaultActiveKey="0">
