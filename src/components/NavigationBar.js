@@ -1,6 +1,7 @@
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import styles from "../styles/Navigation.module.css";
+import Login from "./Login";
 
 export default function NavigationBar() {
   return (
@@ -34,6 +35,9 @@ export default function NavigationBar() {
                 <Nav.Link className="fs-5 mx-2 text-light" href="#contact">
                   Blog
                 </Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Login />
               </Nav.Item>
             </Nav>
           </Navbar.Collapse>

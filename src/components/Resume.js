@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Container, Row, Card } from "react-bootstrap";
+import { Col, Row, Card } from "react-bootstrap";
 import styles from "../styles/Resume.module.css";
 import uuid from "react-uuid";
 

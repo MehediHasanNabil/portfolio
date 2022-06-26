@@ -19,6 +19,7 @@ export default function Home() {
       {/* <FAQ />
         <Hr /> */}
       <Resume />
+      <Hr />
       <ProgrammingSkill />
       <Hr />
       <Contact />

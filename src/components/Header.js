@@ -1,11 +1,11 @@
 import { Button, Container, Row } from "react-bootstrap";
 import styles from "../styles/Header.module.css";
 import { Typewriter } from "react-simple-typewriter";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import AvatarImage from "./AvatarImage";
 import SocialMedia from "./SocialMedia";
 
-export default function Header() {
+function Header() {
   useEffect(function () {
     const home = document.getElementById("home");
     window.addEventListener("scroll", function () {
@@ -15,9 +15,9 @@ export default function Header() {
       }
     });
   }, []);
+  console.log("Header");
   return (
     <section id="home" className={`text-light ${styles.backgroundImage}`}>
-      {/* <MyParticles />  */}
       <Container>
         <Row className="position-relative" style={{ minHeight: "100vh" }}>
           <div
@@ -26,10 +26,16 @@ export default function Header() {
           >
             <AvatarImage />
             <br />
-            <h2 className="my-2 fw-bold" style={{ fontSize: "2.2rem" }}>
+            <h2
+              className="my-2 fw-bold"
+              style={{
+                fontSize: "2.2rem",
+                fontFamily: "'Josefin Sans', 'sans-serif' !important",
+              }}
+            >
               I am{"  "}
               <Typewriter
-                words={["a Web Developer.", "an UI/UX Designer."]}
+                words={["a web developer.", "an ui/ux designer."]}
                 loop={3}
                 cursor
                 cursorStyle="_"
@@ -54,3 +60,4 @@ export default function Header() {
     </section>
   );
 }
+export default React.memo(Header);
