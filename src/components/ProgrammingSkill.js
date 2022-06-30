@@ -9,6 +9,7 @@ import {
   Spinner,
   Tooltip,
 } from "react-bootstrap";
+import axios from "axios";
 import { API_URL } from "../App";
 import swal from "sweetalert";
 import { LoggedInUser } from "../App";
@@ -31,11 +32,14 @@ export default function ProgrammingSkill() {
   };
 
   function getDataFromDatabase() {
-    fetch(`${API_URL}/api/skills/`)
-      .then((response) => response.json())
-      .then((data) => {
-        setSkills(data);
-        setLoading(false);
+    axios
+      .get(`${API_URL}/api/skills/`)
+      .then((response) => {
+        if (response.status === 200) {
+          setSkills(response.data);
+          setLoading(false);
+        }
+        console.log(response)
       })
       .catch((err) => {
         swal("Error", err.message, "error");
@@ -55,6 +59,7 @@ export default function ProgrammingSkill() {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
+        Authorization: `Bearer ${authUserInfo?.idToken}`,
       },
       body: JSON.stringify(data),
     })

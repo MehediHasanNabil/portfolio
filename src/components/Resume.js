@@ -7,14 +7,8 @@ export default function Resume() {
   const education = [
     {
       id: uuid(),
-      program: "M.Sc. in Computer Science",
-      year: "2023 - ",
-      university: "Southeast University",
-    },
-    {
-      id: uuid(),
       program: "Bachelor in Computer Engineering",
-      year: "2019 - 2022",
+      year: "2019 - 2023",
       university: "Southeast University",
     },
     {

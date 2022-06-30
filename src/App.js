@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "aos/dist/aos.css";
 import AOS from "aos";
-import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { getAuth, getIdToken, onAuthStateChanged } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
@@ -19,7 +19,10 @@ function App() {
     email: "",
     emailVerified: false,
     photoURL: "",
+    idToken: "",
   });
+
+  console.log(authUser)
 
   const auth = getAuth(initializeFirebaseApp);
 
@@ -32,13 +35,16 @@ function App() {
 
       onAuthStateChanged(auth, (user) => {
         if (user) {
-          const userObj = {
-            displayName: user?.displayName,
-            email: user?.email,
-            emailVerified: user?.emailVerified,
-            photoURL: user?.photoURL,
-          };
-          setAuthUser(userObj);
+          getIdToken(user).then((idToken) => {
+            const userObj = {
+              displayName: user?.displayName,
+              email: user?.email,
+              emailVerified: user?.emailVerified,
+              photoURL: user?.photoURL,
+              idToken: idToken,
+            };
+            setAuthUser(userObj);
+          });
         } else {
           setAuthUser({});
         }
