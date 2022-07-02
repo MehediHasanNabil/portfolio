@@ -1,14 +1,14 @@
-import React, { useContext } from "react";
-import { Image, Dropdown } from "react-bootstrap";
-import swal from "sweetalert";
+import React, { useContext } from 'react';
+import { Image, Dropdown } from 'react-bootstrap';
+import swal from 'sweetalert';
 import {
   getAuth,
   signOut,
   signInWithPopup,
   GoogleAuthProvider,
-} from "firebase/auth";
-import initializeFirebaseApp from "../firebaseConfig";
-import { LoggedInUser } from "../App";
+} from 'firebase/auth';
+import initializeFirebaseApp from '../firebaseConfig';
+import { LoggedInUser } from '../App';
 
 export default function Login() {
   const provider = new GoogleAuthProvider();
@@ -18,11 +18,11 @@ export default function Login() {
   function signInWithGoogle() {
     signInWithPopup(auth, provider)
       .then((result) => {
-        swal("Authenticate By Google", "Google sign in success", "success");
+        swal('Authenticate By Google', 'Google sign in success', 'success');
       })
       .catch((error) => {
         // Handle Errors here.
-        swal("Error", error.message, "error");
+        swal('Error', error.message, 'error');
       });
   }
 
@@ -30,11 +30,11 @@ export default function Login() {
     signOut(auth)
       .then(() => {
         // Sign-out successful.
-        swal("Authenticate By Google", "Sign-out successful", "success");
+        swal('Authenticate By Google', 'Sign-out successful', 'success');
       })
       .catch((error) => {
         // An error happened.
-        swal("Error", error.message, "error");
+        swal('Error', error.message, 'error');
       });
   }
 

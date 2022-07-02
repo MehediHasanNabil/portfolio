@@ -6,7 +6,7 @@ import codeEditor from "../assets/online-code-editor.png";
 import portfolioPic from "../assets/portfolio.png";
 import chatPic from "../assets/undraw_chatting_re_j55r.svg";
 import eCommercePic from "../assets/undraw_web_shopping_re_owap.svg";
-import resume from "../assets/undraw_resume_folder_re_e0bi.svg";
+import onlineCoursePic from "../assets/course_app_using_react.png";
 import React from "react";
 
 function Project({ project, limit }) {
@@ -22,7 +22,7 @@ function Project({ project, limit }) {
       id: uuid(),
       name: "Online Code Editor (React)",
       backgroundPic: codeEditor,
-      liveUrl: "https://movie-ticket-booking-nodejs.herokuapp.com/",
+      liveUrl: "https://online-code-editor-demo.netlify.app",
     },
     {
       id: uuid(),
@@ -44,9 +44,9 @@ function Project({ project, limit }) {
     },
     {
       id: uuid(),
-      name: "Resume Builder Web Application",
-      backgroundPic: resume,
-      liveUrl: "https://movie-ticket-booking-nodejs.herokuapp.com/",
+      name: "Online Course App React",
+      backgroundPic: onlineCoursePic,
+      liveUrl: "https://course-app-react.netlify.app/",
     },
   ];
 

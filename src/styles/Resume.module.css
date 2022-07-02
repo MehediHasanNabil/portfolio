@@ -1,13 +1,32 @@
 .resume_border {
-  border-left: 5px solid black;
-  padding-left: 2rem;
+  position: relative;
 }
 
-.arrow_icon:before {
-  content: "";
+.resume_border::after {
+  content: '';
   position: absolute;
-  width: 100px;
-  height: 100px;
-  top: 0;
-  left: 0;
+  width: 4px;
+  height: 100%;
+  top: 60px;
+  left: 50%;
+  transform: translate(-50%, 10px);
+  background-color: azure;
+  border-radius: 20px;
+}
+
+.circle {
+  position: relative;
+}
+
+.circle::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%, 0px);
+  background-color: coral;
+  border-radius: 20px;
+  z-index: 9;
 }
